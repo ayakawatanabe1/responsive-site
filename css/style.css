@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #281a14;
+  font-size: 1.4rem;
+  font-family: Gulim, YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #f8f4e6; }
+
+a {
+  color: #c85554;
+  text-decoration: none; }
+  a:visited {
+    color: #b03a39; }
+  a:hover {
+    color: #b03a39; }
+  a:active {
+    color: #ce6867; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.box {
+  background-image: url("../images/YAMA.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (max-width: 768px) {
+  .box {
+    height: 250px; } }
+.title {
+  text-align: center;
+  margin: 10px; }
+  .title #main-title {
+    font-size: 5.0rem;
+    color: #c85554; }
+  .title #sub-title {
+    font-size: 2.0rem;
+    padding-bottom: 10px; }
+
+.contents {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+.charm {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f8f4e6;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #c5c56a; }
+  .charm h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-bottom: 10px; }
+
+@media (min-width: 769px) {
+  .contents {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px; } }
+footer {
+  background-color: #c5c56a;
+  padding: 20px 0;
+  text-align: center;
+  color: #000000;
+  margin-top: 40px;
+  font-weight: bold; }
+
+button {
+  background-color: #c85554;
+  padding: 5px 10px 5px 10px;
+  font-size: 2rem;
+  margin: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,124 @@
+@import "compass";
+// font-family
+$baseFontFamily :Gulim, YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #f8f4e6;
+$subColor: #c5c56a;
+$keyColor: #c85554;
+$fontColor: #281a14;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// header
+
+.box {
+  background-image:url("../images/YAMA.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  .box {
+    height: 250px;
+  }
+}
+
+.title{
+    text-align:center;
+    margin:10px;
+    
+    #main-title{
+        font-size:5.0rem;
+        color:#c85554;
+     }
+    
+    #sub-title{
+        font-size:2.0rem;
+        padding-bottom:10px;
+    }
+}
+
+
+  .contents {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column); 
+    // スキルボックスを縦に並べる
+      
+  }
+  .charm {
+    @include flex(1);
+    margin: 10px;                     // 上下にマージン
+    padding: 20px;
+    background-color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    background-color:$subColor;
+    
+    h3{
+        font-size:1.7rem;
+        font-weight: bold; 
+        padding-bottom:10px;
+    }
+  }
+ 
+ @media (min-width: 769px) {
+
+ .contents {
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+      padding-left:20px;
+      padding-right:20px;
+    }
+}
+
+footer {
+  background-color: $subColor;
+  padding: 20px 0;
+  text-align: center;
+  color: #000000;
+  margin-top:40px;
+  font-weight: bold;
+}
+
+button{
+  background-color: $keyColor;  
+  padding:5px 10px 5px 10px;  
+  font-size:2rem;
+  margin:10px;
+  @include border-radius(10px);
+}
